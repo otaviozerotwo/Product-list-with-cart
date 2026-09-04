@@ -1,0 +1,58 @@
+@import './base/reset.css';
+@import './base/fonts.css';
+
+:root {
+  --bg: hsl(20, 50%, 98%);
+  --text: #27100D;
+  --shadow: 0.5px 0 0px currentColor, -0.5px 0 0px currentColor;
+  --sans: 'Red Hat Text', sans-serif;
+/*
+  --border: #e5e4e7;
+  --code-bg: #f4f3ec;
+  --accent: #aa3bff;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+  --accent-border: rgba(170, 59, 255, 0.5);
+  --social-bg: rgba(244, 243, 236, 0.5); */
+
+  font: 1rem var(--sans);
+  color: var(--text);
+  background: var(--bg);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding-inline: 1.5rem;
+  margin: auto;
+}
+
+.title {
+  text-shadow: var(--shadow);
+  letter-spacing: 1px;
+  padding-block: 1.5rem;
+}
+
+.main-container {
+  display: grid;
+
+  @media (min-width: 64rem) {
+    grid-template-columns: 1fr 300px;
+  }
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 720px;
+  gap: 1.5rem 1rem;
+
+  @media (min-width: 26.5625rem) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 48rem) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

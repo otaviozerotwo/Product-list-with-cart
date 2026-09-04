@@ -1,0 +1,28 @@
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  background-color: #ffffff;
+}
+
+.cart-title {
+  font-size: 1.5rem;
+  text-shadow: var(--shadow);
+  letter-spacing: 1px;
+  color: hsl(14, 86%, 42%);
+  margin-bottom: 2rem;
+}
+
+.cart-empty-img {
+  height: 8rem;
+}
+
+.cart-empty-text {
+  margin-top: 1rem;
+  color: hsl(12, 20%, 44%);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: center;
+}
