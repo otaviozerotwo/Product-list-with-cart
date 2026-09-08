@@ -35,6 +35,10 @@
   flex-grow: 1;
   padding-block: 1.5rem;
 
+  .title-card-grid-group {
+    margin-bottom: 2rem;
+  }
+
   @media (min-width: 64rem) {
     grid-template-columns: 6fr 3fr;
     padding-block: 3rem;
@@ -55,4 +59,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   gap: 1.5rem 1rem;
+
+  @media (min-width: 26.5625rem) {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 15rem));
+  }
 }

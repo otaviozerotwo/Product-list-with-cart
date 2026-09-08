@@ -20,30 +20,6 @@ const App = () => {
               name='Waffle with Berries'
               price='$6.50'
             />
-            <Card
-              imgMobile={imgWaffleMobile}
-              imgTablet={imgWaffleTable}
-              imgDesktop={imgWaffleDesktop}
-              category='Waffle'
-              name='Waffle with Berries'
-              price='$6.50'
-            />
-            <Card
-              imgMobile={imgWaffleMobile}
-              imgTablet={imgWaffleTable}
-              imgDesktop={imgWaffleDesktop}
-              category='Waffle'
-              name='Waffle with Berries'
-              price='$6.50'
-            />
-            <Card
-              imgMobile={imgWaffleMobile}
-              imgTablet={imgWaffleTable}
-              imgDesktop={imgWaffleDesktop}
-              category='Waffle'
-              name='Waffle with Berries'
-              price='$6.50'
-            />
           </div>
         </div>
 
