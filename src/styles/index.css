@@ -58,7 +58,7 @@
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  gap: 1.5rem 1rem;
+  gap: 1.5rem;
 
   @media (min-width: 26.5625rem) {
     grid-template-columns: repeat(auto-fit, minmax(15rem, 15rem));

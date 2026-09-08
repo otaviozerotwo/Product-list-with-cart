@@ -1,7 +1,5 @@
+import data from '../data.json';
 import Card from "./components/Card";
-import imgWaffleMobile from './assets/images/image-waffle-mobile.jpg';
-import imgWaffleTable from './assets/images/image-waffle-tablet.jpg';
-import imgWaffleDesktop from './assets/images/image-waffle-desktop.jpg';
 import Cart from "./components/Cart";
 import Footer from "./components/Footer";
 
@@ -11,16 +9,20 @@ const App = () => {
       <main className="main-container">
         <div className="title-card-grid-group">
           <h1 className="title">Desserts</h1>
-          <div className="card-grid">
-            <Card
-              imgMobile={imgWaffleMobile}
-              imgTablet={imgWaffleTable}
-              imgDesktop={imgWaffleDesktop}
-              category='Waffle'
-              name='Waffle with Berries'
-              price='$6.50'
-            />
-          </div>
+          <ul className="card-grid">
+            {data.map((item) => (
+              <li key={item.name}>
+                <Card key={item.name}
+                  imgMobile={item.image.mobile}
+                  imgTablet={item.image.tablet}
+                  imgDesktop={item.image.desktop}
+                  category={item.category}
+                  name={item.name}
+                  price={item.price}
+                />
+              </li>
+            ))}
+          </ul>
         </div>
 
         <Cart />

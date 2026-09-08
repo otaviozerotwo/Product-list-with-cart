@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import iconAddToCart from '../../assets/images/icon-add-to-cart.svg';
-import iconDecrementQuantity from '../../assets/images/icon-decrement-quantity.svg';
-import iconIncrementQuantity from '../../assets/images/icon-increment-quantity.svg';
+import iconAddToCart from '/assets/images/icon-add-to-cart.svg';
+import iconDecrementQuantity from '/assets/images/icon-decrement-quantity.svg';
+import iconIncrementQuantity from '/assets/images/icon-increment-quantity.svg';
 import './styles.css';
 
 const Card = ({ imgMobile, imgTablet, imgDesktop, name, category, price }) => {
@@ -61,7 +61,7 @@ const Card = ({ imgMobile, imgTablet, imgDesktop, name, category, price }) => {
       <div className='card-infos'>
         <span className='card-info-category'>{category}</span>
         <h3 className='card-info-name'>{name}</h3>
-        <span className='card-info-price'>{price}</span>
+        <span className='card-info-price'>{`$${price.toFixed(2)}`}</span>
       </div>
     </div>
   );

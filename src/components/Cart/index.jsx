@@ -1,4 +1,4 @@
-import imgEmptyCart from '../../assets/images/illustration-empty-cart.svg';
+import imgEmptyCart from '/assets/images/illustration-empty-cart.svg';
 import './styles.css';
 
 const Cart = () => (
