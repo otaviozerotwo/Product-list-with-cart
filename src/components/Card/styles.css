@@ -30,7 +30,8 @@
     }
   }
 
-  .card-button {
+  .card-button,
+  .card-button-selected {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -38,15 +39,19 @@
     min-width: 9rem;
     min-height: 2.35rem;
     padding: 0.5rem 1.25rem;
-    border: 1px solid hsl(12, 20%, 44%);
+    border: 1px solid transparent;
     border-radius: 1.25rem;
     font-weight: 600;
-    background-color: #ffffff;
-    color: var(--text);
-    cursor: pointer;
     position: absolute;
     top: 100%;
     transform: translateY(-50%);
+  }
+
+  .card-button {
+    background-color: #ffffff;
+    border-color: hsl(12, 20%, 44%);
+    color: var(--text);
+    cursor: pointer;
   }
 
   .card-button-selected {

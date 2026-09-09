@@ -30,33 +30,31 @@ const Card = ({ imgMobile, imgTablet, imgDesktop, name, category, price }) => {
           <source className='card-img' media='(min-width: 26.5625rem)' srcSet={imgTablet} />
           <img className='card-img' src={imgMobile} alt="" />
         </picture>
-        <button
-          className={!selected ? 'card-button' : 'card-button card-button-selected'}
-          onClick={handleClick}
-        >
-          {!selected ? (
-            <>
-              <img src={iconAddToCart} alt="" />
-              Add to Cart
-            </>
-          ) : (
-            <>
-              <button
-                className='card-button-set-quantity'
-                onClick={handleDecrement}
-              >
-                <img src={iconDecrementQuantity} alt="" />
-              </button>
-              {count}
-              <button
-                className='card-button-set-quantity'
-                onClick={handleIncrement}
-              >
-                <img src={iconIncrementQuantity} alt="" />
-              </button>
-            </>
-          )}
-        </button>
+        {!selected ? (
+          <button
+            className='card-button'
+            onClick={handleClick}
+          >
+            <img src={iconAddToCart} alt="" />
+            Add to Cart
+          </button>
+        ) : (
+          <div className='card-button-selected'>
+            <button
+              className='card-button-set-quantity'
+              onClick={handleDecrement}
+            >
+              <img src={iconDecrementQuantity} alt="" />
+            </button>
+            {count}
+            <button
+              className='card-button-set-quantity'
+              onClick={handleIncrement}
+            >
+              <img src={iconIncrementQuantity} alt="" />
+            </button>
+          </div>
+        )}
       </div>
       <div className='card-infos'>
         <span className='card-info-category'>{category}</span>
