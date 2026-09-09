@@ -7,6 +7,11 @@
   border-radius: 0.5rem;
   padding: 2rem 1.5rem;
   background-color: #ffffff;
+
+  @media (min-width: 48rem) {
+    position: sticky;
+    top: 3rem;
+  }
 }
 
 .cart-title {
