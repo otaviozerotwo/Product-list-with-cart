@@ -52,6 +52,11 @@
     border-color: hsl(12, 20%, 44%);
     color: var(--text);
     cursor: pointer;
+
+    &:hover {
+      border-color: hsl(14, 86%, 42%);
+      color: hsl(14, 86%, 42%);
+    }
   }
 
   .card-button-selected {
@@ -70,6 +75,14 @@
     border: 1px solid #ffffff;
     border-radius: 50%;
     cursor: pointer;
+  }
+
+  .card-button-set-quantity:hover {
+    background-color: #ffffff;
+
+    img {
+      filter: brightness(0) saturate(100%) invert(31%) sepia(99%) saturate(1263%) hue-rotate(352deg) brightness(82%) contrast(98%);
+    }
   }
 }
 
