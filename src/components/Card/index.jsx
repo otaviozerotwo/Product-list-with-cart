@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useCartStore } from '../../store/cart';
 import iconAddToCart from '/assets/images/icon-add-to-cart.svg';
 import iconDecrementQuantity from '/assets/images/icon-decrement-quantity.svg';
 import iconIncrementQuantity from '/assets/images/icon-increment-quantity.svg';
@@ -7,19 +8,24 @@ import './styles.css';
 const Card = ({ imgMobile, imgTablet, imgDesktop, name, category, price }) => {
   const [selected, setSelected] = useState(false);
   const [count, setCount] = useState(1);
+  const { addDessert, increaseQuantityDessert, decrementQuantityDessert } = useCartStore();
 
   const handleClick = () => {
     setSelected(true);
+
+    addDessert(name, category, price, count);
   }
 
   const handleDecrement = () => {
     if (count >= 2) {
       setCount((count) => count - 1);
+      decrementQuantityDessert(name);
     }
   }
 
   const handleIncrement = () => {
     setCount((count) => count + 1);
+    increaseQuantityDessert(name);
   }
 
   return (
