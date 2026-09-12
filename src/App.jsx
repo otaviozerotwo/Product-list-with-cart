@@ -8,7 +8,7 @@ const App = () => {
     <>
       <main className="main-container">
         <div className="title-card-grid-group">
-          <h1 className="title">Desserts</h1>
+          <h1 className="main-title">Desserts</h1>
           <ul className="card-grid">
             {data.map((item) => (
               <li key={item.name}>

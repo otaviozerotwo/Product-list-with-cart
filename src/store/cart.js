@@ -28,4 +28,5 @@ export const useCartStore = create((set) => ({
   removeDessert: (dessertToBeRemoved) => set((state) => ({
     desserts: state.desserts.filter((dessert) => dessert !== dessertToBeRemoved)
   })),
+  clearCart: () => set({ desserts: [] }),
 }));
