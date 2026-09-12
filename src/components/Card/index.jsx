@@ -6,13 +6,12 @@ import iconIncrementQuantity from '/assets/images/icon-increment-quantity.svg';
 import './styles.css';
 
 const Card = ({ imgMobile, imgTablet, imgDesktop, name, category, price }) => {
-  const [selected, setSelected] = useState(false);
   const [count, setCount] = useState(1);
-  const { addDessert, increaseQuantityDessert, decrementQuantityDessert } = useCartStore();
+  const { desserts, addDessert, increaseQuantityDessert, decrementQuantityDessert } = useCartStore();
+
+  const isItemInCart = desserts.some((dessert) => dessert.name === name);
 
   const handleClick = () => {
-    setSelected(true);
-
     addDessert(name, category, price, count);
   }
 
@@ -31,12 +30,12 @@ const Card = ({ imgMobile, imgTablet, imgDesktop, name, category, price }) => {
   return (
     <div className='card-container'>
       <div className='card-img-button-group'>
-        <picture className={!selected ? 'card-img-container' : 'card-img-container card-img-container-selected'}>
+        <picture className={!isItemInCart ? 'card-img-container' : 'card-img-container card-img-container-selected'}>
           <source className='card-img' media='(min-width: 48rem)' srcSet={imgDesktop} />
           <source className='card-img' media='(min-width: 26.5625rem)' srcSet={imgTablet} />
           <img className='card-img' src={imgMobile} alt="" />
         </picture>
-        {!selected ? (
+        {!isItemInCart ? (
           <button
             className='card-button'
             onClick={handleClick}
