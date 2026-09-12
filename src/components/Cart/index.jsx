@@ -6,7 +6,7 @@ import './styles.css';
 import { calculateItemTotalPrice, calculateOrderTotal, calculateTotalQuantity } from '../../utils';
 
 const Cart = () => {
-  const { desserts } = useCartStore();
+  const { desserts, removeDessert } = useCartStore();
 
   return (
     <div className='cart-container'>
@@ -30,7 +30,7 @@ const Cart = () => {
                     <span className='cart-item-total-price'>{`$${(calculateItemTotalPrice(item)).toFixed(2)}`}</span>
                   </div>
                 </div>
-                <button className='cart-item-remove-button'>
+                <button className='cart-item-remove-button' onClick={() => removeDessert(item)}>
                   <img src={iconRemoveItem} alt="" />
                 </button>
               </li>
