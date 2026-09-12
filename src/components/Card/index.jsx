@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useCartStore } from '../../store/cart';
 import iconAddToCart from '/assets/images/icon-add-to-cart.svg';
 import iconDecrementQuantity from '/assets/images/icon-decrement-quantity.svg';
@@ -6,24 +5,24 @@ import iconIncrementQuantity from '/assets/images/icon-increment-quantity.svg';
 import './styles.css';
 
 const Card = ({ imgMobile, imgTablet, imgDesktop, name, category, price }) => {
-  const [count, setCount] = useState(1);
   const { desserts, addDessert, increaseQuantityDessert, decrementQuantityDessert } = useCartStore();
 
   const isItemInCart = desserts.some((dessert) => dessert.name === name);
 
+  const itemInCart = desserts.find((dessert) => dessert.name === name);
+  const quantity = itemInCart ? itemInCart.quantity : 1;
+
   const handleClick = () => {
-    addDessert(name, category, price, count);
+    addDessert(name, category, price, 1);
   }
 
   const handleDecrement = () => {
-    if (count >= 2) {
-      setCount((count) => count - 1);
+    if (quantity >= 2) {
       decrementQuantityDessert(name);
     }
   }
 
   const handleIncrement = () => {
-    setCount((count) => count + 1);
     increaseQuantityDessert(name);
   }
 
@@ -51,7 +50,7 @@ const Card = ({ imgMobile, imgTablet, imgDesktop, name, category, price }) => {
             >
               <img src={iconDecrementQuantity} alt="" />
             </button>
-            {count}
+            {quantity}
             <button
               className='card-button-set-quantity'
               onClick={handleIncrement}
