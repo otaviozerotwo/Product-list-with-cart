@@ -30,7 +30,7 @@
   padding: 1.5rem;
   position: relative;
 
-  .title-card-grid-group {
+  .dessert-list-container {
     margin-bottom: 2rem;
   }
 
@@ -42,23 +42,8 @@
     grid-template-columns: 6fr 3fr;
     padding-block: 3rem;
 
-    .title-card-grid-group {
+    .dessert-list-container {
       margin-right: 2rem;
     }
-  }
-}
-
-.main-title {
-  font-size: 2.3rem;
-  margin-bottom: 1.5rem;
-}
-
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  gap: 1.5rem;
-
-  @media (min-width: 26.5625rem) {
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 15rem));
   }
 }
