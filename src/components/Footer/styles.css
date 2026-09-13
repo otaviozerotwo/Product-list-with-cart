@@ -8,14 +8,14 @@
 
   a {
     font-weight: bold;
-    color: hsl(14, 86%, 42%);
+    color: var(--color-primary);
   }
 
   .bullet {
     display: none;
     height: 0.25rem;
     width: 0.25rem;
-    background-color: hsl(14, 86%, 42%);
+    background-color: var(--color-primary);
     border-radius: 50%;
   }
 }

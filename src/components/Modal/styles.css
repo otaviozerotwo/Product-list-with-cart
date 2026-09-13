@@ -11,7 +11,7 @@
 .modal-container {
   width: 100%;
   padding: 1.5rem;
-  background-color: #ffffff;
+  background-color: var(--white);
   border-radius: 0.75rem;
 
   .modal-content {
@@ -31,18 +31,18 @@
   }
 
   .modal-text {
-    color: hsl(12, 20%, 44%);
+    color: var(--rose-500);
     margin-bottom: 2rem;
   }
 
   .modal-list-items {
-    background-color: var(--bg);
+    background-color: var(--color-bg);
     border-radius: 0.75rem;
     padding-inline: 1rem;
   }
 
   .modal-item-container {
-    border-bottom: 1px solid hsl(7, 20%, 90%);
+    border-bottom: 1px solid var(--rose-100);
   }
 
   .modal-item-content {
@@ -84,12 +84,12 @@
   }
 
   .modal-item-quantity {
-    color: hsl(14, 86%, 42%);
+    color: var(--color-primary);
     font-weight: 600;
   }
 
   .modal-item-price {
-    color: hsl(12, 20%, 44%);
+    color: var(--rose-500);
   }
 
   .modal-item-total-price {

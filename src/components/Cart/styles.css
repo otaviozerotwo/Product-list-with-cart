@@ -6,7 +6,7 @@
   height: fit-content;
   border-radius: 0.5rem;
   padding: 2rem 1.5rem;
-  background-color: #ffffff;
+  background-color: var(--white);
 
   @media (min-width: 48rem) {
     position: sticky;
@@ -16,9 +16,8 @@
 
 .cart-title {
   font-size: 1.5rem;
-  text-shadow: var(--shadow);
   letter-spacing: 1px;
-  color: hsl(14, 86%, 42%);
+  color: var(--color-primary);
 }
 
 .cart-empty-img {
@@ -27,7 +26,7 @@
 }
 
 .cart-empty-text {
-  color: hsl(12, 20%, 44%);
+  color: var(--rose-500);
   font-size: 0.875rem;
   font-weight: 600;
   text-align: center;
@@ -43,7 +42,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid hsl(7, 20%, 90%);
+  border-bottom: 1px solid var(--rose-100);
   padding-block: 0.875rem;
 
   .cart-item-infos-container {
@@ -59,13 +58,13 @@
 
   .cart-item-quantity {
     font-weight: 600;
-    color: hsl(14, 86%, 42%);
+    color: var(--color-primary);
     margin-right: 1rem;
   }
 
   .cart-item-unity-price,
   .cart-item-total-price {
-    color: hsl(12, 20%, 44%);
+    color: var(--rose-500);
   }
 
   .cart-item-total-price {
@@ -90,7 +89,7 @@
   display: flex;
   justify-content: center;
   gap: 0.5rem;
-  background-color: var(--bg);
+  background-color: var(--color-bg);
   padding-block: 1rem;
   border-radius: 0.5rem;
 }
@@ -100,19 +99,19 @@
   justify-content: center;
   height: 1.25rem;
   width: 1.25rem;
-  border: 2px solid hsl(12, 20%, 64%);
+  border: 2px solid var(--rose-300);
   border-radius: 50%;
   cursor: pointer;
-  background-color: #ffffff;
+  background-color: var(--white);
 
   img {
     width: 0.75rem;
-    filter: brightness(0) saturate(100%) invert(84%) sepia(4%) saturate(1865%) hue-rotate(321deg) brightness(78%) contrast(77%);
+    filter: brightness(0) saturate(100%) invert(78%) sepia(5%) saturate(935%) hue-rotate(327deg) brightness(92%) contrast(88%);
   }
 }
 
 .cart-item-remove-button:hover {
-  border-color: hsl(14, 65%, 9%);
+  border-color: var(--rose-900);
 
   img {
     filter: brightness(0) saturate(100%) invert(6%) sepia(14%) saturate(4911%) hue-rotate(340deg) brightness(97%) contrast(98%);

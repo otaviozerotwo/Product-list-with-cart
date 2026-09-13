@@ -2,20 +2,27 @@
 @import './base/fonts.css';
 
 :root {
-  --bg: hsl(20, 50%, 98%);
-  --text: #27100D;
+  --white: hsl(0, 0%, 100%);
+  --red: hsl(14, 86%, 42%);
+  --green: hsl(159, 69%, 38%);
+
+  --rose-50: hsl(20, 50%, 98%);
+  --rose-100: hsl(13, 31%, 94%);
+  --rose-300: rgb(201, 174, 166);
+  --rose-400: hsl(7, 20%, 60%);
+  --rose-500: hsl(12, 20%, 44%);
+  --rose-900: hsl(14, 65%, 9%);
+
+  --color-primary: var(--red);
+  --color-bg: var(--rose-50);
+  --color-text-body: var(--rose-900);
+  --color-text-title: var(--rose-900);
+
   --sans: 'Red Hat Text', sans-serif;
-  /*
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5); */
 
   font: 1rem var(--sans);
-  color: var(--text);
-  background: var(--bg);
+  color: var(--color-text-body);
+  background: var(--color-bg);
 }
 
 #root {
