@@ -2,13 +2,14 @@ import { create } from 'zustand';
 
 export const useCartStore = create((set) => ({
   desserts: [],
-  addDessert: (name, category, price, quantity) => set((state) => ({
+  addDessert: (name, category, price, quantity, imgThumbnail) => set((state) => ({
     desserts: [...state.desserts,
     {
       name,
       category,
       price,
-      quantity
+      quantity,
+      imgThumbnail
     }]
   })),
   increaseQuantityDessert: (name) => set((state) => ({

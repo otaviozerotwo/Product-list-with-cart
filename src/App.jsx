@@ -19,6 +19,7 @@ const App = () => {
                   category={item.category}
                   name={item.name}
                   price={item.price}
+                  imgThumbnail={item.image.thumbnail}
                 />
               </li>
             ))}

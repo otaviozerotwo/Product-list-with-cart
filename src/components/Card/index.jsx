@@ -4,7 +4,7 @@ import iconDecrementQuantity from '/assets/images/icon-decrement-quantity.svg';
 import iconIncrementQuantity from '/assets/images/icon-increment-quantity.svg';
 import './styles.css';
 
-const Card = ({ imgMobile, imgTablet, imgDesktop, name, category, price }) => {
+const Card = ({ imgMobile, imgTablet, imgDesktop, imgThumbnail, name, category, price }) => {
   const { desserts, addDessert, increaseQuantityDessert, decrementQuantityDessert } = useCartStore();
 
   const isItemInCart = desserts.some((dessert) => dessert.name === name);
@@ -13,7 +13,7 @@ const Card = ({ imgMobile, imgTablet, imgDesktop, name, category, price }) => {
   const quantity = itemInCart ? itemInCart.quantity : 1;
 
   const handleClick = () => {
-    addDessert(name, category, price, 1);
+    addDessert(name, category, price, 1, imgThumbnail);
   }
 
   const handleDecrement = () => {

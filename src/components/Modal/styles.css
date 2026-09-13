@@ -9,6 +9,8 @@
 }
 
 .modal-container {
+  max-height: 85vh;
+  overflow-y: auto;
   width: 100%;
   padding: 1.5rem;
   background-color: #ffffff;
@@ -27,6 +29,86 @@
 
   .modal-text {
     color: hsl(12, 20%, 44%);
+    margin-bottom: 2rem;
+  }
+
+  .modal-list-items {
+    background-color: var(--bg);
+    border-radius: 0.75rem;
+    padding-inline: 1rem;
+
+    /* ul {
+      max-height: 4.5rem;
+      overflow-y: auto;
+    } */
+  }
+
+  .modal-item-container {
+    border-bottom: 1px solid hsl(7, 20%, 90%);
+  }
+
+  .modal-item-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1rem;
+  }
+
+  .modal-item-data {
+    display: flex;
+    gap: 1rem;
+    min-width: 0;
+    flex-grow: 1;
+  }
+
+  .modal-item-thumbnail {
+    height: 3.25rem;
+    border-radius: 4px;
+  }
+
+  .modal-item-name-quantity-price-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 0;
+  }
+
+  .modal-item-name {
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .modal-item-quantity-price-group {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .modal-item-quantity {
+    color: hsl(14, 86%, 42%);
+    font-weight: 600;
+  }
+
+  .modal-item-price {
+    color: hsl(12, 20%, 44%);
+  }
+
+  .modal-item-total-price {
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+
+  .modal-total-order {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 2rem;
+
+    span {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
   }
 }
 
@@ -34,10 +116,10 @@
   .modal-overlay {
     align-items: center;
   }
-  
+
   .modal-container {
     width: 480px;
-    
+
     .modal-title {
       max-width: 100%;
     }
