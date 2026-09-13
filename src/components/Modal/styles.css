@@ -9,12 +9,15 @@
 }
 
 .modal-container {
-  max-height: 85vh;
-  overflow-y: auto;
   width: 100%;
   padding: 1.5rem;
   background-color: #ffffff;
   border-radius: 0.75rem;
+
+  .modal-content {
+    max-height: 85vh;
+    overflow-y: auto;
+  }
 
   .modal-icon {
     height: 2.5rem;
@@ -36,11 +39,6 @@
     background-color: var(--bg);
     border-radius: 0.75rem;
     padding-inline: 1rem;
-
-    /* ul {
-      max-height: 4.5rem;
-      overflow-y: auto;
-    } */
   }
 
   .modal-item-container {
@@ -118,7 +116,11 @@
   }
 
   .modal-container {
-    width: 480px;
+    width: 33.75rem;
+
+    .modal-content {
+      padding-inline: 1rem;
+    }
 
     .modal-title {
       max-width: 100%;
